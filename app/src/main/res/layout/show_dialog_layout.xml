@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/textDialog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textSize="16sp"
+        android:layout_margin="16dp"
+        android:textColor="@color/black"
+        android:text="To unsubscribe write STOP ilo and send sms to 21213"
+        android:layout_marginTop="32dp"/>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/okBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textDialog"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="16dp"
+        android:text="OK" />
+
+</RelativeLayout>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_event"
+            android:icon="@drawable/islamic_event"
+            android:title="ইসলামিক ইভেন্ট" />
+        <item
+            android:id="@+id/nav_topic"
+            android:icon="@drawable/islamic_topic"
+            android:title="ইসলামিক টপিক" />
+
+        <item
+            android:id="@+id/nav_hadis"
+            android:icon="@drawable/sohih_hadis"
+            android:title="সহিহ হাদিস" />
+        <item
+            android:id="@+id/nav_dua"
+            android:icon="@drawable/guruttoporno_dua"
+            android:title="গুরুত্বপূর্ণ দোয়া" />
+        <item
+            android:id="@+id/nav_namaz_shikkha"
+            android:icon="@drawable/namaj_sikkha"
+            android:title="নামাজ শিক্ষা" />
+        <item
+            android:id="@+id/nav_quran"
+            android:icon="@drawable/kuran_tilwyat"
+            android:title="কুরআন তিলাওয়াত" />
+        <item
+            android:id="@+id/nav_tasbih"
+            android:icon="@drawable/digital_tajbih"
+            android:title="ডিজিটাল তাসবিহ" />
+        <item
+            android:id="@+id/nav_names"
+            android:icon="@drawable/allah_name"
+            android:title="আল্লাহর নামসমূহ" />
+        <item
+            android:id="@+id/nav_kibla"
+            android:icon="@drawable/qibla_compass"
+            android:title="কিবলা কম্পাস" />
+
+
+        <item
+            android:id="@+id/nav_sub"
+            android:icon="@drawable/subscribe_icon"
+            android:title="সাবসক্রাইব"/>
+
+        <item
+            android:id="@+id/nav_unsub"
+            android:icon="@android:drawable/ic_delete"
+            android:title="আনসাবসক্রাইব"
+            android:visible="false"/>
+    </group>
+
+
+</menu>

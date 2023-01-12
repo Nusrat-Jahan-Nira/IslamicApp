@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/IslamicApp/app/src/main/res/drawable/tranparent_toolbar_bg.xml" value="0.1965" />
+        <entry key="..\:/IslamicApp/app/src/main/res/layout/activity_dashboard.xml" value="0.11614583333333334" />
+        <entry key="..\:/IslamicApp/app/src/main/res/layout/activity_dashboard_drawer.xml" value="0.2453125" />
+        <entry key="..\:/IslamicApp/app/src/main/res/layout/activity_dua.xml" value="0.10208333333333333" />
+        <entry key="..\:/IslamicApp/app/src/main/res/layout/activity_dua_detail.xml" value="0.259375" />
+        <entry key="..\:/IslamicApp/app/src/main/res/layout/activity_kibla_compass.xml" value="0.10208333333333333" />
+        <entry key="..\:/IslamicApp/app/src/main/res/layout/activity_quran.xml" value="0.11614583333333334" />
+        <entry key="..\:/IslamicApp/app/src/main/res/layout/activity_splash.xml" value="0.10208333333333333" />
+        <entry key="..\:/IslamicApp/app/src/main/res/layout/add_msisdn_layout.xml" value="0.2453125" />
+        <entry key="..\:/IslamicApp/app/src/main/res/layout/app_bar_dashboard.xml" value="0.2453125" />
+        <entry key="..\:/IslamicApp/app/src/main/res/layout/bg_overlay.xml" value="0.14427083333333332" />
+        <entry key="..\:/IslamicApp/app/src/main/res/layout/content_dashboard.xml" value="0.264" />
+        <entry key="..\:/IslamicApp/app/src/main/res/layout/dua_row_layout.xml" value="0.2453125" />
+        <entry key="..\:/IslamicApp/app/src/main/res/layout/image_slider_layout_item.xml" value="0.13020833333333334" />
+        <entry key="..\:/IslamicApp/app/src/main/res/layout/nav_header_dashboard.xml" value="0.2453125" />
+        <entry key="..\:/IslamicApp/app/src/main/res/layout/show_dialog_layout.xml" value="0.264" />
+        <entry key="..\:/IslamicApp/app/src/main/res/layout/side_nav_bar.xml" value="0.2453125" />
+        <entry key="..\:/IslamicApp/app/src/main/res/menu/activity_dashboard_drawer.xml" value="0.4" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
