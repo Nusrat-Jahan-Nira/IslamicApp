@@ -20,6 +20,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -125,6 +126,9 @@ public class DashboardActivity extends AppCompatActivity
     private double[] prayerTimesCurrent;
     private int[] offsets;
 
+    LinearLayout linearKiblaCampus,linearHadish,linearDua,linearKuran,linearNamaz,linearIslamicTopic,linearTasbih;
+
+
 
     //private FeatureCoverFlow coverFlow;
     // private CoverFlowAdapter adapter;
@@ -137,9 +141,6 @@ public class DashboardActivity extends AppCompatActivity
     ApiInterface apiInterface;
     TextView arbiDate;
 
-    String url1 = "https://www.geeksforgeeks.org/wp-content/uploads/gfg_200X200-1.png";
-    String url2 = "https://qphs.fs.quoracdn.net/main-qimg-8e203d34a6a56345f86f1a92570557ba.webp";
-    String url3 = "https://bizzbucket.co/wp-content/uploads/2020/08/Life-in-The-Metro-Blog-Title-22.png";
 
     @SuppressLint("SetTextI18n")
     @Override
@@ -178,7 +179,8 @@ public class DashboardActivity extends AppCompatActivity
             MenuItem unsub = menu.findItem(R.id.nav_unsub);
             unsub.setVisible(true);
 
-        } else if (subStatus.matches("2")) {
+        }
+        else if (subStatus.matches("2")) {
 
             MenuItem sub = menu.findItem(R.id.nav_sub);
             sub.setVisible(true);
@@ -211,9 +213,81 @@ public class DashboardActivity extends AppCompatActivity
         sliderView.setScrollTimeInSec(4); //set scroll delay in seconds :
         sliderView.startAutoCycle();
 
+        calander();
+
+        linearKiblaCampus = findViewById(R.id.linearKiblaCampus);
+        linearKiblaCampus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent compass = new Intent(DashboardActivity.this, KiblaCompassActivity.class);
+                startActivity(compass);
+            }
+        });
+
+        linearHadish = findViewById(R.id.linearHadish);
+        linearHadish.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent compass = new Intent(DashboardActivity.this, HadisActivity.class);
+                startActivity(compass);
+            }
+        });
+
+        linearDua = findViewById(R.id.linearDua);
+        linearDua.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent compass = new Intent(DashboardActivity.this, DuaActivity.class);
+                startActivity(compass);
+            }
+        });
+
+        linearKuran = findViewById(R.id.linearKuran);
+        linearKuran.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent compass = new Intent(DashboardActivity.this, QuranActivity.class);
+                startActivity(compass);
+            }
+        });
+
+        linearNamaz = findViewById(R.id.linearNamaz);
+        linearNamaz.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent compass = new Intent(DashboardActivity.this, NamazLessonActivity.class);
+                startActivity(compass);
+            }
+        });
+        linearIslamicTopic = findViewById(R.id.linearIslamicTopic);
+        linearIslamicTopic.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent compass = new Intent(DashboardActivity.this, IslamicTopicActivity.class);
+                startActivity(compass);
+            }
+        });
+        linearTasbih = findViewById(R.id.linearTasbih);
+        linearTasbih.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+//                Intent compass = new Intent(DashboardActivity.this, TasbihActivity.class);
+//                startActivity(compass);
+            }
+        });
 
 
+        main();
 
+
+    }
+
+    public String getURLForResource (int resourceId) {
+        return Uri.parse("android.resource://"+R.class.getPackage().getName()+"/" +resourceId).toString();
+    }
+
+    private void calander(){
         Date c = Calendar.getInstance().getTime();
 
         @SuppressLint("SimpleDateFormat")
@@ -259,17 +333,7 @@ public class DashboardActivity extends AppCompatActivity
 
         TextView tvNameOfDate = findViewById(R.id.nameOfDateTxt);
         tvNameOfDate.setText(dayOfWeek + "," + date);
-
-        main();
-
-
     }
-
-    public String getURLForResource (int resourceId) {
-        return Uri.parse("android.resource://"+R.class.getPackage().getName()+"/" +resourceId).toString();
-    }
-
-
     private void getHijriDate() {
 
         final TextView tvTodayIftar, tvTodaySehri, tvNextSehri, tvNextIftar;
@@ -976,9 +1040,9 @@ public class DashboardActivity extends AppCompatActivity
 
         } else if (id == R.id.nav_topic) {
 
-//
-//            Intent topic = new Intent(DashboardActivity.this, IslamicTopicActivity.class);
-//            startActivity(topic);
+
+            Intent topic = new Intent(DashboardActivity.this, IslamicTopicActivity.class);
+            startActivity(topic);
 
 
         } else if (id == R.id.nav_hadis) {
@@ -994,8 +1058,8 @@ public class DashboardActivity extends AppCompatActivity
 
         } else if (id == R.id.nav_namaz_shikkha) {
 
-//            Intent namazlesson = new Intent(DashboardActivity.this, NamazLessonActivity.class);
-//            startActivity(namazlesson);
+            Intent namazlesson = new Intent(DashboardActivity.this, NamazLessonActivity.class);
+            startActivity(namazlesson);
 
 
         } else if (id == R.id.nav_quran) {

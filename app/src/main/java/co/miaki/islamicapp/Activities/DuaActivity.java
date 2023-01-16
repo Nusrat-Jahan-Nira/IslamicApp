@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.app.Dialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -89,6 +90,13 @@ public class DuaActivity extends AppCompatActivity {
 
         listView.setLayoutManager(lmDuaList);
 
+        listView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
 
         if (GlobalMethods.isConnected(this)) {
 
@@ -123,7 +131,8 @@ public class DuaActivity extends AppCompatActivity {
             }
 
 
-        } else {
+        }
+        else {
 
             builder = new AlertDialog.Builder(DuaActivity.this);
             builder.setTitle("Internet is not connected!!")
@@ -214,13 +223,20 @@ public class DuaActivity extends AppCompatActivity {
 
                         userId = response.body().getResults().getuId();
 
+                        SharedPreferences sharedPreferences = getSharedPreferences("MySharedPref",MODE_PRIVATE);
+                        SharedPreferences.Editor myEdit = sharedPreferences.edit();
+                        myEdit.putString("userId", userId);
+
+                        myEdit.commit();
+
+
                         boolean isInserted = db.insertData(phoneNo, userId);
                         if (isInserted) {
 
                             checkSubUnsubDataparam = new CheckSub_unsub_dataparam();
                             checkSubUnsubDataparam.setuId(userId);
 
-                            callSubCheckApi();
+                           // callSubCheckApi();
                             Toast.makeText(DuaActivity.this, "Data Inserted", Toast.LENGTH_LONG).show();
 
                         } else
@@ -275,11 +291,22 @@ public class DuaActivity extends AppCompatActivity {
                                     @Override
                                     public void onClick(DialogInterface dialogInterface, int i) {
 
+                                        //inputMsisdn();
                                         subscriptionParamModel = new SubscriptionParamModel();
 
-                                        subscriptionParamModel.setuId(userId);
+                                        SharedPreferences sh = getSharedPreferences("MySharedPref", Context.MODE_PRIVATE);
+                                        String aUserID = sh.getString("userId", "");
 
-                                        callSubApi();
+                                        subscriptionParamModel.setuId(aUserID);
+
+                                        if(aUserID== null){
+                                            callSubApi();
+                                        }
+                                        else{
+
+                                            callDuaApi();
+                                        }
+
 
                                     }
                                 })

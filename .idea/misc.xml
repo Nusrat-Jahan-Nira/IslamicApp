@@ -8,16 +8,25 @@
         <entry key="..\:/IslamicApp/app/src/main/res/layout/activity_dashboard_drawer.xml" value="0.2453125" />
         <entry key="..\:/IslamicApp/app/src/main/res/layout/activity_dua.xml" value="0.10208333333333333" />
         <entry key="..\:/IslamicApp/app/src/main/res/layout/activity_dua_detail.xml" value="0.259375" />
-        <entry key="..\:/IslamicApp/app/src/main/res/layout/activity_kibla_compass.xml" value="0.10208333333333333" />
-        <entry key="..\:/IslamicApp/app/src/main/res/layout/activity_quran.xml" value="0.11614583333333334" />
+        <entry key="..\:/IslamicApp/app/src/main/res/layout/activity_hadis.xml" value="0.259375" />
+        <entry key="..\:/IslamicApp/app/src/main/res/layout/activity_islamic_topic.xml" value="0.259375" />
+        <entry key="..\:/IslamicApp/app/src/main/res/layout/activity_kibla_compass.xml" value="0.264" />
+        <entry key="..\:/IslamicApp/app/src/main/res/layout/activity_namaz_lesson.xml" value="0.16979166666666667" />
+        <entry key="..\:/IslamicApp/app/src/main/res/layout/activity_namaz_lesson_detail.xml" value="0.1" />
+        <entry key="..\:/IslamicApp/app/src/main/res/layout/activity_quran.xml" value="0.264" />
+        <entry key="..\:/IslamicApp/app/src/main/res/layout/activity_quran_detail.xml" value="0.259375" />
         <entry key="..\:/IslamicApp/app/src/main/res/layout/activity_splash.xml" value="0.10208333333333333" />
+        <entry key="..\:/IslamicApp/app/src/main/res/layout/activity_tasbih.xml" value="0.259375" />
         <entry key="..\:/IslamicApp/app/src/main/res/layout/add_msisdn_layout.xml" value="0.2453125" />
         <entry key="..\:/IslamicApp/app/src/main/res/layout/app_bar_dashboard.xml" value="0.2453125" />
         <entry key="..\:/IslamicApp/app/src/main/res/layout/bg_overlay.xml" value="0.14427083333333332" />
         <entry key="..\:/IslamicApp/app/src/main/res/layout/content_dashboard.xml" value="0.264" />
         <entry key="..\:/IslamicApp/app/src/main/res/layout/dua_row_layout.xml" value="0.2453125" />
         <entry key="..\:/IslamicApp/app/src/main/res/layout/image_slider_layout_item.xml" value="0.13020833333333334" />
+        <entry key="..\:/IslamicApp/app/src/main/res/layout/namaz_row_layout.xml" value="0.15572916666666667" />
         <entry key="..\:/IslamicApp/app/src/main/res/layout/nav_header_dashboard.xml" value="0.2453125" />
+        <entry key="..\:/IslamicApp/app/src/main/res/layout/quran_row_detail_layout.xml" value="0.2453125" />
+        <entry key="..\:/IslamicApp/app/src/main/res/layout/quran_row_layout.xml" value="0.2453125" />
         <entry key="..\:/IslamicApp/app/src/main/res/layout/show_dialog_layout.xml" value="0.264" />
         <entry key="..\:/IslamicApp/app/src/main/res/layout/side_nav_bar.xml" value="0.2453125" />
         <entry key="..\:/IslamicApp/app/src/main/res/menu/activity_dashboard_drawer.xml" value="0.4" />

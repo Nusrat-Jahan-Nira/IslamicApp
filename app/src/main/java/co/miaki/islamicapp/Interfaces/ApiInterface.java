@@ -3,15 +3,23 @@ package co.miaki.islamicapp.Interfaces;
 import co.miaki.islamicapp.Models.CheckSub_unsub_model.CheckSub_unsub_dataResModel;
 import co.miaki.islamicapp.Models.CheckSub_unsub_model.CheckSub_unsub_dataparam;
 import co.miaki.islamicapp.Models.DataHijri;
+import co.miaki.islamicapp.Models.DuaDetailModel.DuaDetailResponseModel;
 import co.miaki.islamicapp.Models.DuaModel.DuaResponseModel;
 import co.miaki.islamicapp.Models.GetUidModel.GetUidParamModel;
 import co.miaki.islamicapp.Models.GetUidModel.GetUidResponseModel;
+import co.miaki.islamicapp.Models.HadisModel.HadisResponseModel;
+import co.miaki.islamicapp.Models.IslamicTopicModel.IslamicTopicResponseModel;
+import co.miaki.islamicapp.Models.NamazLessonDetailModel.NamazLessonDetailResponseModel;
+import co.miaki.islamicapp.Models.NamazLessonModel.NamazLessonResponseModel;
+import co.miaki.islamicapp.Models.QuranDetailModel.QuranDetailResponseModel;
+import co.miaki.islamicapp.Models.QuranModel.QuranResponseModel;
 import co.miaki.islamicapp.Models.SubscriptionApi.SubscriptionApiResponseModel;
 import co.miaki.islamicapp.Models.SubscriptionApi.SubscriptionParamModel;
 import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
+import retrofit2.http.Query;
 
 public interface ApiInterface {
 
@@ -30,7 +38,27 @@ public interface ApiInterface {
     @GET("/api/dua/list")
     Call<DuaResponseModel> getDua();
 
+    @GET("/api/dua/view")
+    Call<DuaDetailResponseModel> getDuaDetail(@Query("id") String id);
 
+    @GET("/api/hadith")
+    Call<HadisResponseModel> gethadisResponse();
+
+    @GET("/api/sura/list")
+    Call<QuranResponseModel> getSuraName();
+
+    @GET("/api/sura/view")
+    Call<QuranDetailResponseModel> getQuranDetail(@Query("id") int id);
+
+    @GET("/api/namaz/shikkha/list")
+    Call<NamazLessonResponseModel> getNamazList();
+
+    @GET("/api/namaz/shikkha/view?")
+    Call<NamazLessonDetailResponseModel> getNamazDetail(@Query("id") int id);
+
+
+    @GET("/api/islamic/topics")
+    Call<IslamicTopicResponseModel> getTopic();
 
 
 }

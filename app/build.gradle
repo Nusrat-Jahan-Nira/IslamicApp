@@ -60,5 +60,7 @@ dependencies {
 
     implementation 'androidx.cardview:cardview:1.0.0'
 
+    implementation 'com.github.jeancsanchez:JcPlayer:2.7.2'
+
 
 }

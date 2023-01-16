@@ -6,6 +6,10 @@
     <color name="colorAccent">#D81B60</color>
     <color name="drawer_back">#0E6664</color>
 
+    <color name="dashboard_option_card">#19897E</color>
+    <color name="drawer_separator_color">#19897E</color>
+    <color name="Wheat2">#ffcc40</color>
+
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>
@@ -13,6 +17,8 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="ash">#cccccc</color>
+
 
 
 </resources>

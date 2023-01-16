@@ -55,8 +55,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_marginBottom="10dp"
+                android:background="@color/colorPrimaryDark" />
 
             <LinearLayout
+               android:paddingTop="10dp"
                 android:id="@+id/llDailyTime"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -65,7 +71,7 @@
 
 
                 <RelativeLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="40dp"
                     android:layout_margin="2dp"
                     android:layout_weight="1"
@@ -77,14 +83,15 @@
                         android:layout_height="wrap_content"
                         android:layout_centerHorizontal="true"
                         android:paddingTop="8dp"
-                        android:textColor="#ffffff" />
+                        android:textColor="#ffffff"
+                        android:textSize="12sp"/>
 
 
                 </RelativeLayout>
 
 
                 <RelativeLayout
-                    android:layout_width="match_parent"
+                    android:layout_width="0dp"
                     android:layout_height="40dp"
                     android:layout_margin="2dp"
                     android:layout_weight="1"
@@ -98,7 +105,8 @@
                         android:paddingTop="8dp"
                         android:text="test"
                         android:gravity="center"
-                        android:textColor="#ffffff" />
+                        android:textColor="#ffffff"
+                        android:textSize="12sp"/>
 
                 </RelativeLayout>
 
@@ -321,7 +329,6 @@
 
 
             </LinearLayout>
-
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardiftarTime"
                 android:layout_width="match_parent"
@@ -395,7 +402,10 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_alignParentRight="true"
-                            android:layout_margin="8dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginBottom="8dp"
                             android:textColor="@color/white"
                             android:textSize="14sp"
                             android:textStyle="bold" />
@@ -406,305 +416,327 @@
 
             </androidx.cardview.widget.CardView>
 
-
-            <androidx.cardview.widget.CardView
-
-                android:id="@+id/cardMenu"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+            <LinearLayout
                 android:layout_below="@+id/cardiftarTime"
-                android:layout_marginTop="10dp"
-                android:background="@color/colorPrimary"
-
-                app:cardElevation="8dp">
-
-
-                <LinearLayout
-                    android:background="@color/colorPrimary"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/tvPrayerTimeLabel"
-                    android:gravity="center"
-                    android:orientation="horizontal">
-
-                    <LinearLayout
-                        android:layout_margin="2dp"
-                        android:padding="2dp"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:orientation="vertical">
-
-
-                        <ImageView
-                            android:id="@+id/islamicEventImg"
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:layout_margin="4dp"
-                            android:layout_gravity="center_horizontal"
-                            android:src="@drawable/islamic_event" />
-
-                        <TextView
-                            android:id="@+id/islamicEventLabel"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@+id/islamicEventImg"
-                            android:layout_centerHorizontal="true"
-                            android:layout_gravity="center_horizontal"
-                            android:layout_marginTop="-3dp"
-                            android:text="ইসলামিক ইভেন্ট"
-                            android:gravity="center"
-                            android:textColor="@color/black" />
-
-                    </LinearLayout>
-                    <LinearLayout
-                        android:layout_margin="2dp"
-                        android:padding="2dp"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:orientation="vertical">
-
-
-                        <ImageView
-                            android:id="@+id/namajerTimimgImg"
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:layout_margin="4dp"
-                            android:layout_gravity="center_horizontal"
-                            android:src="@drawable/namajer_timimg" />
-
-                        <TextView
-                            android:id="@+id/namajerTimimgLabel"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@+id/namajerTimimgImg"
-                            android:layout_centerHorizontal="true"
-                            android:layout_gravity="center_horizontal"
-                            android:layout_marginTop="-3dp"
-                            android:text="নামাযের  সময়সূচী"
-                            android:gravity="center"
-                            android:textColor="@color/black" />
-
-                    </LinearLayout>
-                    <LinearLayout
-                        android:layout_margin="2dp"
-                        android:padding="2dp"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:orientation="vertical">
-
-
-                        <ImageView
-                            android:id="@+id/ramadnTimingImg"
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:layout_margin="4dp"
-                            android:layout_gravity="center_horizontal"
-                            android:src="@drawable/ramadn_timing_drwr" />
-
-                        <TextView
-                            android:id="@+id/ramadnTimingLabel"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@+id/ramadnTimingImg"
-                            android:layout_centerHorizontal="true"
-                            android:gravity="center"
-                            android:layout_marginTop="-3dp"
-                            android:text="রমজানের  সময়সূচী"
-                            android:textColor="@color/black" />
-
-                    </LinearLayout>
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:orientation="vertical"
-                        android:layout_margin="2dp"
-                        android:padding="2dp"
-                        >
-
-
-                        <ImageView
-                            android:id="@+id/sohihHadisImg"
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:layout_margin="4dp"
-                            android:layout_gravity="center_horizontal"
-                            android:src="@drawable/sohih_hadis" />
-
-                        <TextView
-                            android:id="@+id/sohihHadisLabel"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@+id/sohihHadisImg"
-                            android:layout_centerHorizontal="true"
-                            android:layout_gravity="center_horizontal"
-                            android:layout_marginTop="-3dp"
-                            android:text="সহিহ  হাদিস"
-                            android:gravity="center"
-                            android:textColor="@color/black"
-                            />
-
-                    </LinearLayout>
-
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
-            <androidx.cardview.widget.CardView
-
-                android:id="@+id/cardMenu2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/cardMenu"
-                android:background="@color/colorPrimary"
+                android:layout_marginBottom="5dp"
+                android:orientation="vertical">
 
-                app:cardElevation="8dp">
-
-
-                <LinearLayout
-                    android:id="@+id/linearMenu"
-                    android:background="@color/colorPrimary"
+                <View
+                    android:layout_marginTop="20dp"
+                    android:paddingTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="@color/dashboard_option_card"
+                    />
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardMenu"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/tvPrayerTimeLabel"
-                    android:gravity="center"
-                    android:orientation="horizontal">
+                    app:cardElevation="8dp">
+
 
                     <LinearLayout
-                        android:layout_margin="2dp"
-                        android:padding="2dp"
-                        android:layout_width="0dp"
+                        android:id="@+id/linearIslamicEvent"
+                        android:background="@color/colorPrimaryDark"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
+                        android:layout_below="@+id/tvPrayerTimeLabel"
                         android:gravity="center"
-                        android:orientation="vertical">
+                        android:orientation="horizontal">
 
-
-                        <ImageView
-                            android:id="@+id/guruttopornoDuaImg"
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:layout_margin="4dp"
-                            android:layout_gravity="center_horizontal"
-                            android:src="@drawable/guruttoporno_dua" />
-
-                        <TextView
-                            android:id="@+id/guruttopornoDuaLabel"
-                            android:layout_width="wrap_content"
+                        <LinearLayout
+                            android:layout_margin="2dp"
+                            android:padding="2dp"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_below="@+id/guruttopornoDuaImg"
-                            android:layout_centerHorizontal="true"
-                            android:layout_gravity="center_horizontal"
-                            android:layout_marginTop="-3dp"
-                            android:text="গুরুত্বপূর্ণ দোয়া"
+                            android:layout_weight="1"
                             android:gravity="center"
-                            android:textColor="@color/black" />
+                            android:orientation="vertical">
+
+
+                            <ImageView
+                                android:id="@+id/islamicEventImg"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_margin="4dp"
+                                android:layout_gravity="center_horizontal"
+                                android:src="@drawable/islamic_event" />
+
+                            <TextView
+                                android:id="@+id/islamicEventLabel"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/islamicEventImg"
+                                android:layout_centerHorizontal="true"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="-3dp"
+                                android:text="ইসলামিক ইভেন্ট"
+                                android:gravity="center"
+                                android:textColor="@color/white" />
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:id="@+id/linearIslamicTopic"
+                            android:layout_margin="2dp"
+                            android:padding="2dp"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+
+                            <ImageView
+                                android:id="@+id/namajerTimimgImg"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_margin="4dp"
+                                android:layout_gravity="center_horizontal"
+                                android:src="@drawable/islamic_topic" />
+
+                            <TextView
+                                android:id="@+id/namajerTimimgLabel"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/namajerTimimgImg"
+                                android:layout_centerHorizontal="true"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="-3dp"
+                                android:text="ইসলামিক টপিক"
+                                android:gravity="center"
+                                android:textColor="@color/white" />
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:id="@+id/linearTasbih"
+                            android:layout_margin="2dp"
+                            android:padding="2dp"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+
+                            <ImageView
+                                android:id="@+id/ramadnTimingImg"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_margin="4dp"
+                                android:layout_gravity="center_horizontal"
+                                android:src="@drawable/digital_tajbih" />
+
+                            <TextView
+                                android:id="@+id/ramadnTimingLabel"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/ramadnTimingImg"
+                                android:layout_centerHorizontal="true"
+                                android:gravity="center"
+                                android:layout_marginTop="-3dp"
+                                android:text="ডিজিটাল তাসবিহ"
+                                android:textColor="@color/white" />
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:id="@+id/linearHadish"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:layout_margin="2dp"
+                            android:padding="2dp"
+                            >
+
+
+                            <ImageView
+                                android:id="@+id/sohihHadisImg"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_margin="4dp"
+                                android:layout_gravity="center_horizontal"
+                                android:src="@drawable/sohih_hadis" />
+
+                            <TextView
+                                android:id="@+id/sohihHadisLabel"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/sohihHadisImg"
+                                android:layout_centerHorizontal="true"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="-3dp"
+                                android:text="সহিহ  হাদিস"
+                                android:gravity="center"
+                                android:textColor="@color/white"
+                                />
+
+                        </LinearLayout>
 
                     </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardMenu2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/cardMenu"
+                    android:background="@color/colorPrimary"
+                    app:cardElevation="8dp">
+
+
                     <LinearLayout
-                        android:layout_margin="2dp"
-                        android:padding="2dp"
-                        android:layout_width="0dp"
+                        android:id="@+id/linearMenu"
+                        android:background="@color/colorPrimaryDark"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
+                        android:layout_below="@+id/tvPrayerTimeLabel"
                         android:gravity="center"
-                        android:orientation="vertical">
+                        android:orientation="horizontal">
 
-
-                        <ImageView
-                            android:id="@+id/namazSikkhaImg"
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:layout_margin="4dp"
-                            android:layout_gravity="center_horizontal"
-                            android:src="@drawable/namaj_sikkha" />
-
-                        <TextView
-                            android:id="@+id/namazSikkhaLabel"
-                            android:layout_width="wrap_content"
+                        <LinearLayout
+                            android:id="@+id/linearDua"
+                            android:layout_margin="2dp"
+                            android:padding="2dp"
+                            android:layout_width="0dp"
                             android:layout_height="wrap_content"
-                            android:layout_below="@+id/namazSikkhaImg"
-                            android:layout_centerHorizontal="true"
-                            android:layout_gravity="center_horizontal"
-                            android:layout_marginTop="-3dp"
-                            android:text="নামাজ শিক্ষা"
+                            android:layout_weight="1"
                             android:gravity="center"
-                            android:textColor="@color/black" />
+                            android:orientation="vertical">
+
+
+                            <ImageView
+                                android:id="@+id/guruttopornoDuaImg"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_margin="4dp"
+                                android:layout_gravity="center_horizontal"
+                                android:src="@drawable/guruttoporno_dua" />
+
+                            <TextView
+                                android:id="@+id/guruttopornoDuaLabel"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/guruttopornoDuaImg"
+                                android:layout_centerHorizontal="true"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="-3dp"
+                                android:text="গুরুত্বপূর্ণ দোয়া"
+                                android:gravity="center"
+                                android:textColor="@color/white" />
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:id="@+id/linearNamaz"
+                            android:layout_margin="2dp"
+                            android:padding="2dp"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+
+                            <ImageView
+                                android:id="@+id/namazSikkhaImg"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_margin="4dp"
+                                android:layout_gravity="center_horizontal"
+                                android:src="@drawable/namaj_sikkha" />
+
+                            <TextView
+                                android:id="@+id/namazSikkhaLabel"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/namazSikkhaImg"
+                                android:layout_centerHorizontal="true"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="-3dp"
+                                android:text="নামাজ শিক্ষা"
+                                android:gravity="center"
+                                android:textColor="@color/white" />
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:id="@+id/linearKuran"
+                            android:layout_margin="2dp"
+                            android:padding="2dp"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+
+                            <ImageView
+                                android:id="@+id/kuranTilwatImg"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_margin="4dp"
+                                android:layout_gravity="center_horizontal"
+                                android:src="@drawable/kuran_tilwyat" />
+
+                            <TextView
+                                android:id="@+id/kuranTilwatLabel"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/kuranTilwatImg"
+                                android:layout_centerHorizontal="true"
+                                android:gravity="center"
+                                android:layout_marginTop="-3dp"
+                                android:text="কুরআন তিলাওয়াত"
+                                android:textColor="@color/white" />
+
+                        </LinearLayout>
+                        <LinearLayout
+                            android:id="@+id/linearKiblaCampus"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:layout_margin="2dp"
+                            android:padding="2dp"
+                            >
+
+
+                            <ImageView
+                                android:id="@+id/kiblaCampusImg"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+                                android:layout_margin="4dp"
+                                android:layout_gravity="center_horizontal"
+                                android:src="@drawable/qibla_compass" />
+
+                            <TextView
+                                android:id="@+id/kiblaCampusLabel"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/kiblaCampusImg"
+                                android:layout_centerHorizontal="true"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="-3dp"
+                                android:text="কিবলা কম্পাস"
+                                android:gravity="center"
+                                android:textColor="@color/white"
+                                />
+
+                        </LinearLayout>
 
                     </LinearLayout>
-                    <LinearLayout
-                        android:layout_margin="2dp"
-                        android:padding="2dp"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:orientation="vertical">
 
+                </androidx.cardview.widget.CardView>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="@color/dashboard_option_card"
+                    />
 
-                        <ImageView
-                            android:id="@+id/kuranTilwatImg"
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:layout_margin="4dp"
-                            android:layout_gravity="center_horizontal"
-                            android:src="@drawable/kuran_tilwyat" />
+            </LinearLayout>
 
-                        <TextView
-                            android:id="@+id/kuranTilwatLabel"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@+id/kuranTilwatImg"
-                            android:layout_centerHorizontal="true"
-                            android:gravity="center"
-                            android:layout_marginTop="-3dp"
-                            android:text="কুরআন তিলাওয়াত"
-                            android:textColor="@color/black" />
-
-                    </LinearLayout>
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:orientation="vertical"
-                        android:layout_margin="2dp"
-                        android:padding="2dp"
-                        >
-
-
-                        <ImageView
-                            android:id="@+id/kiblaCampusImg"
-                            android:layout_width="50dp"
-                            android:layout_height="50dp"
-                            android:layout_margin="4dp"
-                            android:layout_gravity="center_horizontal"
-                            android:src="@drawable/qibla_compass" />
-
-                        <TextView
-                            android:id="@+id/kiblaCampusLabel"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@+id/kiblaCampusImg"
-                            android:layout_centerHorizontal="true"
-                            android:layout_gravity="center_horizontal"
-                            android:layout_marginTop="-3dp"
-                            android:text="কিবলা কম্পাস"
-                            android:gravity="center"
-                            android:textColor="@color/black"
-                            />
-
-                    </LinearLayout>
-
-                </LinearLayout>
-
-            </androidx.cardview.widget.CardView>
             <Button
                 android:id="@+id/ramadanTym"
                 android:layout_width="wrap_content"

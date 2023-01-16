@@ -13,7 +13,9 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class RetrofitApiClient {
     private static Retrofit retrofit = null;
 
-    public static final String BASE_URL = "http://103.9.185.91:8990";
+//    public static final String BASE_URL = "http://103.9.185.91:8990";
+      public static final String BASE_URL = "https://ialo.t-squaretech.co";
+
 
     private static Gson gson = new GsonBuilder()
             .setLenient()
