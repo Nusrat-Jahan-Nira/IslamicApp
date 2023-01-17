@@ -4,12 +4,15 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/IslamicApp/app/src/main/res/drawable/tranparent_toolbar_bg.xml" value="0.1965" />
+        <entry key="..\:/IslamicApp/app/src/main/res/layout/activity_asmaul_husna.xml" value="0.1734375" />
         <entry key="..\:/IslamicApp/app/src/main/res/layout/activity_dashboard.xml" value="0.11614583333333334" />
         <entry key="..\:/IslamicApp/app/src/main/res/layout/activity_dashboard_drawer.xml" value="0.2453125" />
-        <entry key="..\:/IslamicApp/app/src/main/res/layout/activity_dua.xml" value="0.10208333333333333" />
+        <entry key="..\:/IslamicApp/app/src/main/res/layout/activity_dua.xml" value="0.2" />
         <entry key="..\:/IslamicApp/app/src/main/res/layout/activity_dua_detail.xml" value="0.259375" />
         <entry key="..\:/IslamicApp/app/src/main/res/layout/activity_hadis.xml" value="0.259375" />
+        <entry key="..\:/IslamicApp/app/src/main/res/layout/activity_islamic_event.xml" value="0.1734375" />
         <entry key="..\:/IslamicApp/app/src/main/res/layout/activity_islamic_topic.xml" value="0.259375" />
+        <entry key="..\:/IslamicApp/app/src/main/res/layout/activity_islamic_topic_detail.xml" value="0.176" />
         <entry key="..\:/IslamicApp/app/src/main/res/layout/activity_kibla_compass.xml" value="0.264" />
         <entry key="..\:/IslamicApp/app/src/main/res/layout/activity_namaz_lesson.xml" value="0.16979166666666667" />
         <entry key="..\:/IslamicApp/app/src/main/res/layout/activity_namaz_lesson_detail.xml" value="0.1" />
@@ -23,6 +26,7 @@
         <entry key="..\:/IslamicApp/app/src/main/res/layout/content_dashboard.xml" value="0.264" />
         <entry key="..\:/IslamicApp/app/src/main/res/layout/dua_row_layout.xml" value="0.2453125" />
         <entry key="..\:/IslamicApp/app/src/main/res/layout/image_slider_layout_item.xml" value="0.13020833333333334" />
+        <entry key="..\:/IslamicApp/app/src/main/res/layout/islamic_event_row_layout.xml" value="0.259375" />
         <entry key="..\:/IslamicApp/app/src/main/res/layout/namaz_row_layout.xml" value="0.15572916666666667" />
         <entry key="..\:/IslamicApp/app/src/main/res/layout/nav_header_dashboard.xml" value="0.2453125" />
         <entry key="..\:/IslamicApp/app/src/main/res/layout/quran_row_detail_layout.xml" value="0.2453125" />

@@ -15,6 +15,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 
 import co.miaki.islamicapp.Activities.DuaDetailActivity;
+import co.miaki.islamicapp.Activities.IslamicTopicActivity;
+import co.miaki.islamicapp.Activities.IslamicTopicDetailActivity;
 import co.miaki.islamicapp.Models.DuaModel.DuaDataModel;
 import co.miaki.islamicapp.Models.IslamicTopicModel.IslamicTopicDataModel;
 import co.miaki.islamicapp.R;
@@ -49,7 +51,7 @@ public class IslamicTopicAdapter extends RecyclerView.Adapter<IslamicTopicAdapte
     public void onBindViewHolder(IslamicTopicAdapter.ViewHolder holder, int position) {
 
         final String title = dataList.get(position).getTitle();
-        //final int itemId = dataList.get(position).getId();
+        final String audioItem = dataList.get(position).getAudio_path();
 
 
         holder.titleTxt.setText(title);
@@ -60,12 +62,12 @@ public class IslamicTopicAdapter extends RecyclerView.Adapter<IslamicTopicAdapte
             @Override
             public void onClick(View view) {
 
-//                Intent intent = new Intent(context, DuaDetailActivity.class);
-//
-//                intent.putExtra("itemId",itemId);
-//
-//                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-//                context.startActivity(intent);
+                Intent intent = new Intent(context, IslamicTopicDetailActivity.class);
+
+                intent.putExtra("audioItem",audioItem);
+
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                context.startActivity(intent);
 
 
             }

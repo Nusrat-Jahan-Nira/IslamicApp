@@ -1,33 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="2dp"
-    >
-
-    <View
-        android:id="@+id/border"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#ffffff"/>
+    android:background="@drawable/label_bg">
 
     <TextView
-        android:id="@+id/tvSurahName"
+        android:id="@+id/quranTxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/white"
+        android:layout_centerHorizontal="true"
+        android:textColor="#ffffff"
         android:textSize="14sp"
-        android:layout_below="@+id/border"
-        android:layout_margin ="8dp"
-        android:textAlignment="viewStart"
-        android:gravity="start" />
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_margin="4dp"/>
-    <!--        android:src="@drawable/ic_baseline_keyboard_arrow_right_24"-->
-
+        android:layout_marginBottom="16dp"
+        android:layout_centerVertical="true"/>
 
 </RelativeLayout>

@@ -20,6 +20,7 @@
         android:usesCleartextTraffic="true"
         tools:ignore="GoogleAppIndexingWarning">
 
+
         <activity
             android:name=".SplashActivity"
             android:exported="true"
@@ -119,7 +120,6 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="co.miaki.islamicapp.Activities.DashboardActivity" />
         </activity>
-
         <activity
             android:name="co.miaki.islamicapp.Activities.IslamicTopicActivity"
             android:label="ইসলামিক টপিক"
@@ -132,6 +132,18 @@
         </activity>
 
         <activity
+            android:name="co.miaki.islamicapp.Activities.IslamicTopicDetailActivity"
+            android:label="ইসলামিক টপিক"
+            android:parentActivityName=".Activities.NamazLessonDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="co.miaki.islamicapp.Activities.DashboardActivity" />
+        </activity>
+
+
+        <activity
             android:name="co.miaki.islamicapp.Activities.TasbihActivity"
             android:label="ডিজিটাল তাসবিহ "
             android:parentActivityName=".Activities.NamazLessonDetailActivity"
@@ -141,6 +153,27 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="co.miaki.islamicapp.Activities.DashboardActivity" />
         </activity>
+        <activity
+            android:name="co.miaki.islamicapp.Activities.IslamicEventActivity"
+            android:label="ইসলামিক ইভেন্ট"
+            android:parentActivityName=".Activities.DashboardActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+         <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="co.miaki.islamicapp.Activities.DashboardActivity" />
+         </activity>
+
+        <activity
+            android:name="co.miaki.islamicapp.Activities.AsmaulHusnaActivity"
+            android:label="আল্লাহর নামের তাৎপর্য"
+            android:parentActivityName=".Activities.AsmaulHusnaActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+         <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="co.miaki.islamicapp.Activities.AsmaulHusnaActivity" />
+         </activity>
 
     </application>
 

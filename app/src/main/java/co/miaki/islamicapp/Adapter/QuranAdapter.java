@@ -82,7 +82,7 @@ public class QuranAdapter extends RecyclerView.Adapter<QuranAdapter.ViewHolder> 
         ViewHolder(View itemView) {
             super(itemView);
 
-            surahName = itemView.findViewById(R.id.tvSurahName);
+            surahName = itemView.findViewById(R.id.quranTxt);
 
         }
 

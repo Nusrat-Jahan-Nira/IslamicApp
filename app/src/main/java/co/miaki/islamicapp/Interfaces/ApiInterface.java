@@ -8,9 +8,11 @@ import co.miaki.islamicapp.Models.DuaModel.DuaResponseModel;
 import co.miaki.islamicapp.Models.GetUidModel.GetUidParamModel;
 import co.miaki.islamicapp.Models.GetUidModel.GetUidResponseModel;
 import co.miaki.islamicapp.Models.HadisModel.HadisResponseModel;
+import co.miaki.islamicapp.Models.IslamicEventModel.IslamicEventResponseModel;
 import co.miaki.islamicapp.Models.IslamicTopicModel.IslamicTopicResponseModel;
 import co.miaki.islamicapp.Models.NamazLessonDetailModel.NamazLessonDetailResponseModel;
 import co.miaki.islamicapp.Models.NamazLessonModel.NamazLessonResponseModel;
+import co.miaki.islamicapp.Models.NamazTimingModel.NamazTimingApiResponseModel;
 import co.miaki.islamicapp.Models.QuranDetailModel.QuranDetailResponseModel;
 import co.miaki.islamicapp.Models.QuranModel.QuranResponseModel;
 import co.miaki.islamicapp.Models.SubscriptionApi.SubscriptionApiResponseModel;
@@ -59,6 +61,14 @@ public interface ApiInterface {
 
     @GET("/api/islamic/topics")
     Call<IslamicTopicResponseModel> getTopic();
+
+    @GET("/api/namaz/timing")
+    Call<NamazTimingApiResponseModel> getNamazTiming();
+
+
+    @GET("/api/islamic/event/all")
+    Call<IslamicEventResponseModel> getIslamicEventAllList();
+
 
 
 }

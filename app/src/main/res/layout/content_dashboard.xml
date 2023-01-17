@@ -102,11 +102,11 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerHorizontal="true"
-                        android:paddingTop="8dp"
-                        android:text="test"
                         android:gravity="center"
+                        android:paddingTop="8dp"
+                        android:text=""
                         android:textColor="#ffffff"
-                        android:textSize="12sp"/>
+                        android:textSize="12sp" />
 
                 </RelativeLayout>
 
@@ -164,7 +164,7 @@
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/fajarLabel"
                         android:layout_centerHorizontal="true"
-                        android:text="2546"
+                        android:text=""
                         android:textColor="@color/black"
                         android:textSize="14sp" />
 
@@ -327,8 +327,15 @@
 
                 </LinearLayout>
 
-
             </LinearLayout>
+            <ProgressBar
+                android:id="@+id/pBarDua"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/llTiming"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="16dp"/>
+
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardiftarTime"
                 android:layout_width="match_parent"
