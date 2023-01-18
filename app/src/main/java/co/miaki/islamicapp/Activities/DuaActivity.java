@@ -17,11 +17,15 @@ import android.database.Cursor;
 import android.os.Bundle;
 import android.os.Handler;
 import android.provider.Settings;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.Toast;
+
+import com.google.android.material.navigation.NavigationView;
 
 import java.util.ArrayList;
 
@@ -164,7 +168,7 @@ public class DuaActivity extends AppCompatActivity {
         final Dialog dialog = new Dialog(this);
         dialog.setContentView(R.layout.add_msisdn_layout);
         dialog.setCancelable(false);
-        dialog.setTitle("you have to subscribe first! subscription charge 2.55tk/per day.Only for robi & airtel users");
+        dialog.setTitle("you have to subscribe first! subscription charge 2.67tk/per day.Only for robi & airtel users");
 
         final Button addButton = dialog.findViewById(R.id.addMsisdnBtn);
         final Button cancelButton = dialog.findViewById(R.id.cancelMsisdnBtn);
@@ -236,8 +240,29 @@ public class DuaActivity extends AppCompatActivity {
                             checkSubUnsubDataparam = new CheckSub_unsub_dataparam();
                             checkSubUnsubDataparam.setuId(userId);
 
-                           // callSubCheckApi();
-                            Toast.makeText(DuaActivity.this, "Data Inserted", Toast.LENGTH_LONG).show();
+                            callSubCheckApi();
+
+                        builder = new AlertDialog.Builder(DuaActivity.this);
+                        builder.setTitle("Subscribe first!Subscription charge 2.67tk/per day!")
+                                .setCancelable(false)
+                                .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+                                    @Override
+                                    public void onClick(DialogInterface dialogInterface, int i) {
+
+                                        Toast.makeText(DuaActivity.this, "Data Inserted", Toast.LENGTH_LONG).show();
+
+
+                                    }
+                                })
+                                .setNegativeButton(android.R.string.cancel, new DialogInterface.OnClickListener() {
+                                    public void onClick(DialogInterface dialog, int which) {
+
+                                        dialog.dismiss();
+                                        finish();
+                                    }
+                                })
+                                .show();
+
 
                         } else
                             Toast.makeText(DuaActivity.this, "Data not Inserted", Toast.LENGTH_LONG).show();
@@ -278,20 +303,6 @@ public class DuaActivity extends AppCompatActivity {
 
 
                     } else {
-
-
-                        SharedPreferences.Editor editor = getSharedPreferences("SUB_STATUS_PREF", MODE_PRIVATE).edit();
-                        editor.putString("subStatus", "2");
-                        editor.apply();
-
-                        builder = new AlertDialog.Builder(DuaActivity.this);
-                        builder.setTitle("Subscribe first!Subscription charge 2.55tk/per day!")
-                                .setCancelable(false)
-                                .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
-                                    @Override
-                                    public void onClick(DialogInterface dialogInterface, int i) {
-
-                                        //inputMsisdn();
                                         subscriptionParamModel = new SubscriptionParamModel();
 
                                         SharedPreferences sh = getSharedPreferences("MySharedPref", Context.MODE_PRIVATE);
@@ -307,17 +318,44 @@ public class DuaActivity extends AppCompatActivity {
                                             callDuaApi();
                                         }
 
-
-                                    }
-                                })
-                                .setNegativeButton(android.R.string.cancel, new DialogInterface.OnClickListener() {
-                                    public void onClick(DialogInterface dialog, int which) {
-
-                                        dialog.dismiss();
-                                        finish();
-                                    }
-                                })
-                                .show();
+                        SharedPreferences.Editor editor = getSharedPreferences("SUB_STATUS_PREF", MODE_PRIVATE).edit();
+                        editor.putString("subStatus", "2");
+                        editor.apply();
+//
+//                        builder = new AlertDialog.Builder(DuaActivity.this);
+//                        builder.setTitle("Subscribe first!Subscription charge 2.67tk/per day!")
+//                                .setCancelable(false)
+//                                .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+//                                    @Override
+//                                    public void onClick(DialogInterface dialogInterface, int i) {
+//
+//                                        //inputMsisdn();
+//                                        subscriptionParamModel = new SubscriptionParamModel();
+//
+//                                        SharedPreferences sh = getSharedPreferences("MySharedPref", Context.MODE_PRIVATE);
+//                                        String aUserID = sh.getString("userId", "");
+//
+//                                        subscriptionParamModel.setuId(aUserID);
+//
+//                                        if(aUserID== null){
+//                                            callSubApi();
+//                                        }
+//                                        else{
+//
+//                                            callDuaApi();
+//                                        }
+//
+//
+//                                    }
+//                                })
+//                                .setNegativeButton(android.R.string.cancel, new DialogInterface.OnClickListener() {
+//                                    public void onClick(DialogInterface dialog, int which) {
+//
+//                                        dialog.dismiss();
+//                                        finish();
+//                                    }
+//                                })
+//                                .show();
                     }
 
                 } catch (Exception e) {

@@ -78,13 +78,14 @@
                     android:background="@drawable/bar">
 
                     <TextView
+                        android:gravity="center"
                         android:id="@+id/nameOfDateTxt"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerHorizontal="true"
                         android:paddingTop="8dp"
                         android:textColor="#ffffff"
-                        android:textSize="12sp"/>
+                        android:textSize="12sp" />
 
 
                 </RelativeLayout>
@@ -101,7 +102,7 @@
                         android:id="@+id/arbiDateTxt"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
                         android:gravity="center"
                         android:paddingTop="8dp"
                         android:text=""

@@ -158,7 +158,7 @@ public class NamazLessonActivity extends AppCompatActivity {
         final Dialog dialog = new Dialog(this);
         dialog.setContentView(R.layout.add_msisdn_layout);
         dialog.setCancelable(false);
-        dialog.setTitle("you have to subscribe first! subscription charge 2.55tk/per day.Only for robi & airtel users");
+        dialog.setTitle("you have to subscribe first! subscription charge 2.67tk/per day.Only for robi & airtel users");
 
         final Button addButton = dialog.findViewById(R.id.addMsisdnBtn);
         final Button cancelButton = dialog.findViewById(R.id.cancelMsisdnBtn);
@@ -230,8 +230,28 @@ public class NamazLessonActivity extends AppCompatActivity {
                             checkSubUnsubDataparam = new CheckSub_unsub_dataparam();
                             checkSubUnsubDataparam.setuId(userId);
 
-                            // callSubCheckApi();
-                            Toast.makeText(NamazLessonActivity.this, "Data Inserted", Toast.LENGTH_LONG).show();
+                             callSubCheckApi();
+                            builder = new AlertDialog.Builder(NamazLessonActivity.this);
+                            builder.setTitle("Subscribe first!Subscription charge 2.67tk/per day!")
+                                    .setCancelable(false)
+                                    .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+                                        @Override
+                                        public void onClick(DialogInterface dialogInterface, int i) {
+
+                                            Toast.makeText(NamazLessonActivity.this, "Data Inserted", Toast.LENGTH_LONG).show();
+
+
+                                        }
+                                    })
+                                    .setNegativeButton(android.R.string.cancel, new DialogInterface.OnClickListener() {
+                                        public void onClick(DialogInterface dialog, int which) {
+
+                                            dialog.dismiss();
+                                            finish();
+                                        }
+                                    })
+                                    .show();
+
 
                         } else
                             Toast.makeText(NamazLessonActivity.this, "Data not Inserted", Toast.LENGTH_LONG).show();
@@ -274,45 +294,59 @@ public class NamazLessonActivity extends AppCompatActivity {
 
                     } else {
 
+                        subscriptionParamModel = new SubscriptionParamModel();
+
+                        SharedPreferences sh = getSharedPreferences("MySharedPref", Context.MODE_PRIVATE);
+                        String aUserID = sh.getString("userId", "");
+
+                        subscriptionParamModel.setuId(aUserID);
+
+                        if(aUserID== null){
+                            callSubApi();
+                        }
+                        else{
+
+                            callNamazApi();
+                        }
 
                         SharedPreferences.Editor editor = getSharedPreferences("SUB_STATUS_PREF", MODE_PRIVATE).edit();
                         editor.putString("subStatus", "2");
                         editor.apply();
 
-                        builder = new AlertDialog.Builder(NamazLessonActivity.this);
-                        builder.setTitle("Subscribe first!Subscription charge 2.55tk/per day!")
-                                .setCancelable(false)
-                                .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
-                                    @Override
-                                    public void onClick(DialogInterface dialogInterface, int i) {
-
-                                        //inputMsisdn();
-                                        subscriptionParamModel = new SubscriptionParamModel();
-
-                                        SharedPreferences sh = getSharedPreferences("MySharedPref", Context.MODE_PRIVATE);
-                                        String aUserID = sh.getString("userId", "");
-
-                                        subscriptionParamModel.setuId(aUserID);
-
-                                        if(aUserID== null){
-                                            callSubApi();
-                                        }
-                                        else{
-
-                                            callNamazApi();
-                                        }
-
-
-                                    }
-                                })
-                                .setNegativeButton(android.R.string.cancel, new DialogInterface.OnClickListener() {
-                                    public void onClick(DialogInterface dialog, int which) {
-
-                                        dialog.dismiss();
-                                        finish();
-                                    }
-                                })
-                                .show();
+//                        builder = new AlertDialog.Builder(NamazLessonActivity.this);
+//                        builder.setTitle("Subscribe first!Subscription charge 2.67tk/per day!")
+//                                .setCancelable(false)
+//                                .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+//                                    @Override
+//                                    public void onClick(DialogInterface dialogInterface, int i) {
+//
+//                                        //inputMsisdn();
+//                                        subscriptionParamModel = new SubscriptionParamModel();
+//
+//                                        SharedPreferences sh = getSharedPreferences("MySharedPref", Context.MODE_PRIVATE);
+//                                        String aUserID = sh.getString("userId", "");
+//
+//                                        subscriptionParamModel.setuId(aUserID);
+//
+//                                        if(aUserID== null){
+//                                            callSubApi();
+//                                        }
+//                                        else{
+//
+//                                            callNamazApi();
+//                                        }
+//
+//
+//                                    }
+//                                })
+//                                .setNegativeButton(android.R.string.cancel, new DialogInterface.OnClickListener() {
+//                                    public void onClick(DialogInterface dialog, int which) {
+//
+//                                        dialog.dismiss();
+//                                        finish();
+//                                    }
+//                                })
+//                                .show();
                     }
 
                 } catch (Exception e) {

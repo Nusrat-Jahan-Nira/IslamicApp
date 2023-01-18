@@ -103,6 +103,10 @@ public class DashboardActivity extends AppCompatActivity
 
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
+
+
+
+
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
@@ -121,24 +125,38 @@ public class DashboardActivity extends AppCompatActivity
         getHijriDate();
 
         Menu menu = navigationView.getMenu();
+        MenuItem sub = menu.findItem(R.id.nav_sub);
+        MenuItem unsub = menu.findItem(R.id.nav_unsub);
 
-        if (subStatus.matches("1")) {
+        SharedPreferences sh = getSharedPreferences("MySharedPref", Context.MODE_PRIVATE);
+        String aUserID = sh.getString("userId", "");
 
-            MenuItem sub = menu.findItem(R.id.nav_sub);
-            sub.setVisible(false);
-
-            MenuItem unsub = menu.findItem(R.id.nav_unsub);
-            unsub.setVisible(true);
-
-        }
-        else if (subStatus.matches("2")) {
-
-            MenuItem sub = menu.findItem(R.id.nav_sub);
+        if(aUserID.equals("")){
             sub.setVisible(true);
-
-            MenuItem unsub = menu.findItem(R.id.nav_unsub);
             unsub.setVisible(false);
         }
+        else{
+            sub.setVisible(false);
+            unsub.setVisible(true);
+        }
+
+//        if (subStatus.matches("1")) {
+//
+//            //MenuItem sub = menu.findItem(R.id.nav_sub);
+//            sub.setVisible(false);
+//
+//            //MenuItem unsub = menu.findItem(R.id.nav_unsub);
+//            unsub.setVisible(true);
+//
+//        }
+//        else if (subStatus.matches("2")) {
+//
+//            //MenuItem sub = menu.findItem(R.id.nav_sub);
+//            sub.setVisible(true);
+//
+//            //MenuItem unsub = menu.findItem(R.id.nav_unsub);
+//            unsub.setVisible(false);
+//        }
 
 
         apiInterface = RetrofitApiClient.getClient().create(ApiInterface.class);
@@ -484,6 +502,8 @@ public class DashboardActivity extends AppCompatActivity
             checkSubUnsubDataparam.setuId(uniqueId);
             subscriptionParamModel.setuId(uniqueId);
 
+
+
             callSubCheckApi();
         }
 
@@ -506,7 +526,7 @@ public class DashboardActivity extends AppCompatActivity
         final Dialog dialog = new Dialog(this);
         dialog.setContentView(R.layout.add_msisdn_layout);
         dialog.setCancelable(true);
-        dialog.setTitle("you have to subscribe first! subscription charge 2.55tk/per day.Only for robi & airtel users");
+        dialog.setTitle("you have to subscribe first! subscription charge 2.67tk/per day.Only for robi & airtel users");
 
         final Button addButton = dialog.findViewById(R.id.addMsisdnBtn);
 
@@ -635,7 +655,7 @@ public class DashboardActivity extends AppCompatActivity
 //
 //
 //                        builder = new AlertDialog.Builder(DashboardActivity.this);
-//                        builder.setTitle("Subscribe first!Subscription charge 2.55tk/per day!")
+//                        builder.setTitle("Subscribe first!Subscription charge 2.67tk/per day!")
 //                                .setCancelable(false)
 //                                .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
 //                                    @Override
@@ -757,10 +777,7 @@ public class DashboardActivity extends AppCompatActivity
     }
 
     public void gotoRamadan(View view) {
-
-
     }
-
 
 
 }
