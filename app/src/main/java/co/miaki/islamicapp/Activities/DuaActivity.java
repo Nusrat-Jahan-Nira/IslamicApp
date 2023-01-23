@@ -123,8 +123,8 @@ public class DuaActivity extends AppCompatActivity {
 
                 if (cursor.moveToFirst()) {
 
-                    //msisdn = cursor.getString(cursor.getColumnIndex("PHONE"));
-                    //uniqueId = cursor.getString(cursor.getColumnIndex("USER_ID"));
+                    msisdn = cursor.getString(cursor.getColumnIndex("PHONE"));
+                    uniqueId = cursor.getString(cursor.getColumnIndex("USER_ID"));
                 }
 
                 checkSubUnsubDataparam = new CheckSub_unsub_dataparam();
@@ -227,11 +227,11 @@ public class DuaActivity extends AppCompatActivity {
 
                         userId = response.body().getResults().getuId();
 
-                        SharedPreferences sharedPreferences = getSharedPreferences("MySharedPref",MODE_PRIVATE);
-                        SharedPreferences.Editor myEdit = sharedPreferences.edit();
-                        myEdit.putString("userId", userId);
-
-                        myEdit.commit();
+//                        SharedPreferences sharedPreferences = getSharedPreferences("MySharedPref",MODE_PRIVATE);
+//                        SharedPreferences.Editor myEdit = sharedPreferences.edit();
+//                        myEdit.putString("userId", userId);
+//
+//                        myEdit.commit();
 
 
                         boolean isInserted = db.insertData(phoneNo, userId);
@@ -305,18 +305,23 @@ public class DuaActivity extends AppCompatActivity {
                     } else {
                                         subscriptionParamModel = new SubscriptionParamModel();
 
-                                        SharedPreferences sh = getSharedPreferences("MySharedPref", Context.MODE_PRIVATE);
-                                        String aUserID = sh.getString("userId", "");
+//                                        SharedPreferences sh = getSharedPreferences("MySharedPref", Context.MODE_PRIVATE);
+//                                        String aUserID = sh.getString("userId", "");
 
-                                        subscriptionParamModel.setuId(aUserID);
+                                        //subscriptionParamModel.setuId(aUserID);
 
-                                        if(aUserID== null){
+                                         subscriptionParamModel.setuId(userId);
+
+                                    //    if(aUserID== null){
                                             callSubApi();
-                                        }
-                                        else{
+                                        //}
+//                                        else{
+//
+//                                            callDuaApi();
+//                                        }
 
-                                            callDuaApi();
-                                        }
+
+
 
                         SharedPreferences.Editor editor = getSharedPreferences("SUB_STATUS_PREF", MODE_PRIVATE).edit();
                         editor.putString("subStatus", "2");

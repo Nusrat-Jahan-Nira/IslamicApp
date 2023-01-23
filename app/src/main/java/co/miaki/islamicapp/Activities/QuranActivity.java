@@ -330,18 +330,18 @@ public class QuranActivity extends AppCompatActivity {
 
                         subscriptionParamModel = new SubscriptionParamModel();
 
-                        SharedPreferences sh = getSharedPreferences("MySharedPref", Context.MODE_PRIVATE);
-                        String aUserID = sh.getString("userId", "");
+//                        SharedPreferences sh = getSharedPreferences("MySharedPref", Context.MODE_PRIVATE);
+//                        String aUserID = sh.getString("userId", "");
 
-                        subscriptionParamModel.setuId(aUserID);
+                        subscriptionParamModel.setuId(userId);
 
-                        if(aUserID== null){
+                       // if(aUserID== null){
                             callSubApi();
-                        }
-                        else{
-
-                            callQuranAPI();
-                        }
+//                        }
+//                        else{
+//
+//                            callQuranAPI();
+//                        }
 
                         SharedPreferences.Editor editor = getSharedPreferences("SUB_STATUS_PREF", MODE_PRIVATE).edit();
                         editor.putString("subStatus", "2");

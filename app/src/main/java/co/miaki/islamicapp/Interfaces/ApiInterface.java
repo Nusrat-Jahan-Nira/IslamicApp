@@ -20,6 +20,7 @@ import co.miaki.islamicapp.Models.SubscriptionApi.SubscriptionParamModel;
 import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.GET;
+import retrofit2.http.Headers;
 import retrofit2.http.POST;
 import retrofit2.http.Query;
 
@@ -28,13 +29,23 @@ public interface ApiInterface {
     @GET("/api/hijri")
     Call<DataHijri> getHijriDate();
 
+//    @POST("http://103.9.185.88/bdapps/islamer_alo/public/get_uid")
+//    Call<GetUidResponseModel>getUid(@Body GetUidParamModel getUidParamModel);
+//
+//    @POST("http://103.9.185.88/bdapps/islamer_alo/public/check_subscription")
+//    Call<CheckSub_unsub_dataResModel> checkSub(@Body CheckSub_unsub_dataparam checkSub_unsub_dataparam);
+//
+//    @POST("http://103.9.185.88/bdapps/islamer_alo/public/subscribe")
+//    Call<SubscriptionApiResponseModel>getSubResponse(@Body SubscriptionParamModel subscriptionParamModel);
+
+
     @POST("http://103.9.185.88/bdapps/islamer_alo/public/get_uid")
     Call<GetUidResponseModel>getUid(@Body GetUidParamModel getUidParamModel);
 
     @POST("http://103.9.185.88/bdapps/islamer_alo/public/check_subscription")
     Call<CheckSub_unsub_dataResModel> checkSub(@Body CheckSub_unsub_dataparam checkSub_unsub_dataparam);
 
-    @POST("http://103.9.185.88/bdapps/islamer_alo/public/subscribe")
+    @POST(" http://103.9.185.88/bdapps/islamer_alo/public/subscribe")
     Call<SubscriptionApiResponseModel>getSubResponse(@Body SubscriptionParamModel subscriptionParamModel);
 
     @GET("/api/dua/list")

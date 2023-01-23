@@ -622,6 +622,8 @@ public class DashboardActivity extends AppCompatActivity
                     assert response.body() != null;
                     if (response.body().getResults().matches("REGISTERED")) {
 
+                        Toast.makeText(DashboardActivity.this, "Already subscribe!", Toast.LENGTH_SHORT).show();
+
                         NavigationView navigationView = findViewById(R.id.nav_view);
                         Menu menu = navigationView.getMenu();
 
